@@ -1,78 +1,81 @@
-#Gesture Controlled Drone System:
+# Gesture Controlled Drone System
 
-This repository contains an AIMS DTU project focused on controlling a drone using hand gestures in real time. The project combines computer vision and deep learning to study human–drone interaction with an emphasis on reliability, safety, and real-time performance.
+This repository contains an AIMS DTU project focused on controlling a drone using hand gestures in real time. The project explores computer vision and deep learning techniques for safe and intuitive human–drone interaction.
 
-#Overview
+---
 
-The system processes a live camera feed to detect hand gestures and map them to drone actions. MediaPipe is used for hand detection and landmark extraction, while a custom convolutional neural network (CNN) is trained to classify directional gestures from cropped hand images.
-Drone commands are currently implemented as dummy functions.
+## Overview
 
-#Technologies Used:
+The system processes a live camera feed to detect hand gestures and map them to drone actions. MediaPipe is used for real-time hand detection and landmark extraction, while a custom CNN is trained on a self-collected dataset to classify directional gestures.
 
-Python
+Drone commands are currently implemented as dummy functions for testing and demonstration.
 
-OpenCV
+---
 
-MediaPipe (Tasks API)
+## Tech Stack
 
-TensorFlow / Keras
+- Python  
+- OpenCV  
+- MediaPipe (Tasks API)  
+- TensorFlow / Keras  
 
-#Gesture Recognition Pipeline:
+---
 
-Webcam input
+## Gesture Recognition Pipeline
 
-MediaPipe hand detection and cropping
+1. Webcam input  
+2. MediaPipe hand detection and cropping  
+3. CNN-based gesture classification  
+4. State-based control logic  
+5. Drone command execution (dummy)  
 
-CNN-based gesture classification
+---
 
-State-based control logic
+## Supported Gestures
 
-Drone command execution (dummy)
+### CNN-based gestures
+- Stop  
+- Up  
+- Down  
+- Left  
+- Right  
 
-#Supported Gestures
+### System-level gestures
+- Photo capture with countdown  
+- Follow-me mode using face detection  
+- Safe return-to-user and shutdown sequence  
 
-Stop
+---
 
-Up
+## Dataset
 
-Down
+- Dataset is self-collected using a webcam  
+- Hand images are cropped using MediaPipe during capture  
+- Dataset split: 80% training, 20% validation  
 
-Left
-
-Right
-
-Logic-based system gestures:
-
-Photo capture with countdown
-
-Follow-me mode using face detection
-
-Return-to-user and shutdown sequence
-
-#Dataset:
-Dataset is self-collected using a webcam
-
-Hand images are cropped using MediaPipe during capture
-
-Dataset split: 80% training, 20% validation
-
-Project Structure
-
-Notes
-This project focuses on perception and control logic, not hardware integration.
-
-All drone-related actions are placeholders for testing and demonstration.
-
-Future Work:
-
-Extend gesture set
-
-Improve robustness using data augmentation
+---
 
 
-Temporal gesture recognition
-Edge deployment and hardware integration
+---
 
-Author
-Arnav Bisht
+## Notes
+
+- The project focuses on perception and control logic rather than hardware integration.  
+- All drone-related commands are placeholders.  
+
+---
+
+## Future Improvements
+
+- Add more gesture classes  
+- Improve robustness using data augmentation  
+- Temporal gesture recognition  
+- Edge deployment  
+- Integration with real drone hardware  
+
+---
+
+## Author
+
+Arnav Bisht  
 AIMS DTU
