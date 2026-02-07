@@ -16,7 +16,7 @@ if face_cascade.empty():
         "Failed to load haarcascade_frontalface_default.xml"
     )
 
-# ===================== SYSTEM STATE =====================
+# ===================== SYSTEM STATE ====================
 class SystemState(Enum):
     NORMAL = 0
     PHOTO_COUNTDOWN = 1
@@ -292,3 +292,4 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
+
