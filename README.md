@@ -6,8 +6,7 @@ This repository contains an AIMS DTU project focused on controlling a drone usin
 
 ## Overview
 
-The system processes a live camera feed to detect hand gestures and map them to drone actions. MediaPipe is used for real-time hand detection and landmark extraction, while a custom CNN is trained on a self-collected dataset to classify directional gestures.
-
+The system processes a live camera feed to detect hand gestures and map them to drone actions. MediaPipe is used for real-time hand detection and landmark extraction, while a custom CNN is trained parallely on a self-collected dataset to classify directional gestures.
 Drone commands are currently implemented as dummy functions for testing and demonstration.
 
 ---
@@ -21,7 +20,7 @@ Drone commands are currently implemented as dummy functions for testing and demo
 
 ---
 
-## Gesture Recognition Pipeline
+## Gesture Recognition Pipeline (CNN)
 
 1. Webcam input  
 2. MediaPipe hand detection and cropping  
@@ -33,12 +32,15 @@ Drone commands are currently implemented as dummy functions for testing and demo
 
 ## Supported Gestures
 
-### CNN-based gestures
+### Mediapipe-based gestures
 - Stop  
 - Up  
 - Down  
 - Left  
-- Right  
+- Right
+- Closer (to user)
+- Farther (from user)
+- Speed Control
 
 ### System-level gestures
 - Photo capture with countdown  
@@ -47,7 +49,7 @@ Drone commands are currently implemented as dummy functions for testing and demo
 
 ---
 
-## Dataset
+## Dataset (for CNN)
 
 - Dataset is self-collected using a webcam  
 - Hand images are cropped using MediaPipe during capture  
@@ -69,8 +71,7 @@ Drone commands are currently implemented as dummy functions for testing and demo
 
 - Add more gesture classes  
 - Improve robustness using data augmentation  
-- Temporal gesture recognition  
-- Edge deployment  
+- Temporal gesture recognition
 - Integration with real drone hardware  
 
 ---
